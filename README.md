@@ -17,7 +17,7 @@
   
   ## Usage
   
-  Use "NPM I" to install the required packages, then run "npm start" to run the program. Follow the prompts to create the page.
+  Use "NPM I" to install the required packages, then run "node index.js" to run the program. Follow the prompts to create the page.
   
   ![Screenshot](/lib/Screenshot.png)
 
