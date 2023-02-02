@@ -4,6 +4,7 @@ const Intern = require("./lib/Intern");
 const Manager = require("./lib/Manager");
 const inquirer = require('inquirer');
 const fs = require("fs");
+const generateHTML = require("./src/generateHTML")
 const { type } = require("os");
 var employees = [];
 
@@ -119,11 +120,22 @@ function continueadding(){
                 break
                 }
             case "No": {
-                console.log("gameover")
+                console.log(employees)
+                console.log("Generating Webpage")
+                let pageData = generateHTML(employees)
+                console.log(pageData)
+                const filename = `./dist/index.html`;
+                writeToFile(filename, pageData)  
                 break
             } 
         }
     })
+}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, (err) =>
+      err ? console.error(err) : console.log('Success!')
+    );
+   
 }
 
 init()
