@@ -124,7 +124,7 @@ function continueadding(){
                 console.log("Generating Webpage")
                 let pageData = generateHTML(employees)
                 console.log(pageData)
-                const filename = `./dist/index.html`;
+                const filename = `./dist/Sample_index.html`;
                 writeToFile(filename, pageData)  
                 break
             } 
